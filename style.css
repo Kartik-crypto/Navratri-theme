@@ -658,6 +658,34 @@
       font-size: .98rem
     }
 
+    .capability-dialog-goddess {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line)
+    }
+
+    .capability-dialog-goddess > span {
+      display: block;
+      color: var(--gold);
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase
+    }
+
+    .capability-dialog-goddess strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem
+    }
+
+    .capability-dialog-goddess p {
+      margin-top: 4px;
+      font-size: .88rem
+    }
+
     .photo-credits {
       width: min(540px, 92%);
       margin: 12px auto 0;
