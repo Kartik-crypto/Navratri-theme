@@ -1,0 +1,17 @@
+Team-section portrait assets
+
+The eleven portrait images in this folder were downloaded from Unsplash image endpoints and resized by Unsplash's image service for web display:
+
+- aarav.jpg: https://images.unsplash.com/photo-1500648767791-00dcc994a43e
+- ananya.jpg: https://images.unsplash.com/photo-1534528741775-53994a69daeb
+- rohan.jpg: https://images.unsplash.com/photo-1506794778202-cad84cf45f1d
+- meera.jpg: https://images.unsplash.com/photo-1544005313-94ddf0286df2
+- kabir.jpg: https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d
+- nisha.jpg: https://images.unsplash.com/photo-1580489944761-15a19d654956
+- dev.jpg: https://images.unsplash.com/photo-1507591064344-4c6ce005b128
+- priya.jpg: https://images.unsplash.com/photo-1589156280159-27698a70f29e
+- arjun.jpg: https://images.unsplash.com/photo-1504257432389-52343af06ae3
+- sana.jpg: https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91
+- vijay.jpg: https://images.unsplash.com/photo-1500648767791-00dcc994a43e
+
+The names, roles, responsibilities, and profile details shown on the page are fictional sample content for layout preview. Replace them with approved staff information before publishing as a real team directory.
