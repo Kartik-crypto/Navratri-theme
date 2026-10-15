@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <audio class="background-audio" src="assets/audio/navratri-background.mp3" preload="auto" loop></audio>
   <button class="audio-toggle" type="button" aria-label="Start background music" aria-pressed="false">
     <span aria-hidden="true">♫</span><span class="audio-toggle-label">Turn music on</span>
   </button>
@@ -74,7 +75,7 @@
             </button>
             <button class="cap-orbit-point" type="button" aria-pressed="false" style="--point-angle: 240deg"
               data-title="SAP/WMS/MES Manager" data-detail="Responsive support helps users recover from technical issues and maintain continuity in day-to-day work.">
-              <span class="cap-point-inner"><span class="cap-point-number">07</span><span class="cap-point-icon">◎</span><span class="cap-point-label">SAP/WMS/MES Manager</span></span>
+              <span class="cap-point-inner"><span class="cap-point-number">07</span><span class="cap-point-icon">◎</span><span class="cap-point-label">SAP/WMS/MES</span></span>
             </button>
             <button class="cap-orbit-point" type="button" aria-pressed="false" style="--point-angle: 280deg"
               data-title="AI &amp; Innovation" data-detail="Curiosity and responsible experimentation help identify new ways to improve processes and user experiences.">
@@ -234,7 +235,7 @@
             data-photo="assets/team/Pravin.png">
             <img src="assets/team/Pravin.png" alt="" loading="lazy">
             <span class="team-card-shade"></span>
-            <span class="team-card-copy"><span class="team-card-role">Head of department</span><strong>Pravin Singh Mehra</strong><span class="team-card-cta">View profile <span aria-hidden="true">↗</span></span></span>
+            <span class="team-card-copy"><span class="team-card-role">Head of department</span><strong>Pravin Mehra</strong><span class="team-card-cta">View profile <span aria-hidden="true">↗</span></span></span>
           </button>
           <button class="team-card" type="button" aria-haspopup="dialog"
             aria-label="View Tarsem Kumar's profile"
@@ -254,7 +255,7 @@
             data-photo="assets/team/Rahul.png">
             <img src="assets/team/Rahul.png" alt="" loading="lazy">
             <span class="team-card-shade"></span>
-            <span class="team-card-copy"><span class="team-card-role">NETWORKING &amp; DATA BASE</span><strong>Rahul Singh Rawat</strong><span class="team-card-cta">View profile <span aria-hidden="true">↗</span></span></span>
+            <span class="team-card-copy"><span class="team-card-role">NETWORKING &amp; DATA BASE</span><strong>Rahul Singh</strong><span class="team-card-cta">View profile <span aria-hidden="true">↗</span></span></span>
           </button>
           <button class="team-card" type="button" aria-haspopup="dialog"
             aria-label="View Manoj Kumar's profile"
@@ -331,6 +332,7 @@
     const teamDialogClose = document.querySelector('.team-dialog-close');
     const teamCarousel = document.querySelector('.team-carousel');
     const teamCarouselStatus = document.querySelector('.team-carousel-status');
+    const backgroundAudio = document.querySelector('.background-audio');
     const audioToggle = document.querySelector('.audio-toggle');
     let teamStatusTimer;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -338,12 +340,8 @@
     let slideshowPaused = reducedMotion;
     let slideshowTimer;
 
-    // A gentle, locally generated drone avoids an external audio dependency.
-    let musicContext;
-    let musicGain;
     let musicEnabled = true;
     let musicStarted = false;
-    let chimeTimer;
 
     try {
       musicEnabled = localStorage.getItem('digital-durga-music') !== 'off';
@@ -367,58 +365,11 @@
       audioToggle.classList.toggle('is-playing', musicStarted);
     }
 
-    function playChime() {
-      if (!musicContext || !musicGain || !musicEnabled) return;
-      const now = musicContext.currentTime;
-      const noteGain = musicContext.createGain();
-      noteGain.gain.setValueAtTime(0.0001, now);
-      noteGain.gain.exponentialRampToValueAtTime(0.035, now + 0.08);
-      noteGain.gain.exponentialRampToValueAtTime(0.0001, now + 2.8);
-      noteGain.connect(musicGain);
-
-      [587.33, 880, 1174.66].forEach((frequency, index) => {
-        const tone = musicContext.createOscillator();
-        tone.type = 'sine';
-        tone.frequency.value = frequency;
-        tone.connect(noteGain);
-        tone.start(now + index * 0.025);
-        tone.stop(now + 3);
-      });
-    }
-
     async function startMusic() {
       if (!musicEnabled) return;
-      const AudioContext = window.AudioContext || window.webkitAudioContext;
-      if (!AudioContext) {
-        audioToggle.querySelector('.audio-toggle-label').textContent = 'Audio unavailable';
-        return;
-      }
-
-      if (!musicContext) {
-        musicContext = new AudioContext();
-        musicGain = musicContext.createGain();
-        musicGain.gain.value = 0.12;
-        musicGain.connect(musicContext.destination);
-
-        [146.83, 220, 293.66].forEach((frequency, index) => {
-          const tone = musicContext.createOscillator();
-          const toneGain = musicContext.createGain();
-          tone.type = 'sine';
-          tone.frequency.value = frequency;
-          toneGain.gain.value = index === 0 ? 0.42 : 0.13;
-          tone.connect(toneGain);
-          toneGain.connect(musicGain);
-          tone.start();
-        });
-      }
-
       try {
-        await musicContext.resume();
-        musicStarted = musicContext.state === 'running';
-        if (musicStarted && !chimeTimer) {
-          playChime();
-          chimeTimer = window.setInterval(playChime, 12000);
-        }
+        await backgroundAudio.play();
+        musicStarted = true;
       } catch {
         musicStarted = false;
       }
@@ -428,9 +379,7 @@
     function stopMusic() {
       musicEnabled = false;
       saveMusicPreference('off');
-      if (musicContext) musicContext.suspend();
-      window.clearInterval(chimeTimer);
-      chimeTimer = undefined;
+      backgroundAudio.pause();
       updateMusicControl();
     }
 
