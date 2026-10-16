@@ -3,7 +3,7 @@
 A self-contained, mobile-first static website for the Haier IT Department Navratri 2026 decoration contest.
 
 ## Files
-- `index.html` — webpage structure and interactions.
+- `index.html` — webpage structure and interactions, including the three-hit Happy Dushera bow-and-arrow slingshot game with fireworks.
 - `style.css` — responsive page styling.
 - `assets/` — local Navratri artwork, Haier logo SVG, and the Navadurga photos used in the orbit.
 - `assets/navadurga/CREDITS.txt` — image authors, sources, and licenses.
@@ -18,7 +18,7 @@ The team section contains eleven sample profiles in a horizontally scrollable, c
 ## Preview locally
 1. Extract the ZIP.
 2. Open `index.html` in Chrome, Edge, or Firefox.
-3. Test the page at a narrow/mobile width and click the nine capability cards.
+3. Test the page at a narrow/mobile width, click the nine capability cards, and try the Dushera game: pull the arrow back and release, land three hits on Ravan, and replay after the fireworks.
 
 ## Free hosting with GitHub Pages
 GitHub Pages can publish static HTML/CSS/JavaScript from a repository. On GitHub Free, use a **public repository** for the simplest setup. Anything published on a public Pages site can be viewed by anyone, so do not include confidential company information.

@@ -1046,6 +1046,333 @@
       font-size: .84rem
     }
 
+    .dussehra-section {
+      position: relative;
+      overflow: hidden;
+      padding: 78px 0 86px;
+      border-top: 1px solid var(--line);
+      background: radial-gradient(ellipse at 50% 0%, #75303a 0%, #501922 40%, var(--ink) 100%)
+    }
+
+    .dussehra-head {
+      max-width: 760px;
+      margin: 0 auto 22px;
+      text-align: center
+    }
+
+    .dussehra-head h2 {
+      color: var(--cream)
+    }
+
+    .dussehra-head p {
+      color: var(--gold);
+      font-size: 1.15rem;
+      font-weight: 800
+    }
+
+    .dussehra-instructions,
+    .dussehra-status {
+      max-width: 760px;
+      margin: 0 auto 14px;
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center
+    }
+
+    .dussehra-playfield {
+      position: relative;
+      width: min(100%, 1000px);
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid rgba(255, 209, 102, .52);
+      border-radius: 22px;
+      background: #291024;
+      box-shadow: 0 22px 70px rgba(0, 0, 0, .34)
+    }
+
+    .dussehra-scene {
+      display: block;
+      width: 100%;
+      height: auto;
+      touch-action: none;
+      cursor: crosshair
+    }
+
+    .dussehra-scene:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: -5px
+    }
+
+    .dussehra-sky {
+      fill: url(#dussehra-sky)
+    }
+
+    .dussehra-stars {
+      fill: #fff3ce;
+      stroke: #fff3ce;
+      stroke-width: 2;
+      opacity: .8
+    }
+
+    .dussehra-moon {
+      fill: #ffe7a0;
+      filter: drop-shadow(0 0 18px rgba(255, 231, 160, .7))
+    }
+
+    .dussehra-hills {
+      fill: #411622
+    }
+
+    .dussehra-ground {
+      fill: #2b0b13
+    }
+
+    .dussehra-rangoli {
+      fill: none;
+      stroke: rgba(255, 209, 102, .5);
+      stroke-width: 2
+    }
+
+    .dussehra-bow > path:first-child {
+      fill: none;
+      stroke: #ffd166;
+      stroke-width: 12;
+      stroke-linecap: round;
+      filter: drop-shadow(0 0 8px rgba(255, 174, 67, .55))
+    }
+
+    .dussehra-bow-string {
+      fill: none;
+      stroke: #fff1bb;
+      stroke-width: 2
+    }
+
+    .dussehra-bow-grip {
+      fill: #e45d38;
+      stroke: #ffd166;
+      stroke-width: 2
+    }
+
+    .dussehra-arrow {
+      stroke: #fff1bb;
+      stroke-width: 5;
+      stroke-linecap: round;
+      filter: drop-shadow(0 0 7px rgba(255, 241, 187, .7))
+    }
+
+    .dussehra-arrow-rest {
+      fill: #fff1bb
+    }
+
+    .ravan-shadow {
+      fill: rgba(15, 4, 9, .4)
+    }
+
+    .ravan-arm,
+    .ravan-leg {
+      fill: none;
+      stroke: #e58a3d;
+      stroke-width: 16;
+      stroke-linecap: round
+    }
+
+    .ravan-torso {
+      fill: url(#ravan-clothes);
+      stroke: #ffd166;
+      stroke-width: 4
+    }
+
+    .ravan-sash {
+      fill: none;
+      stroke: #fff0a7;
+      stroke-width: 8
+    }
+
+    .ravan-crown {
+      fill: #ffc12f;
+      stroke: #fff0a7;
+      stroke-width: 3;
+      stroke-linejoin: round
+    }
+
+    .ravan-face {
+      fill: #d99b65;
+      stroke: #ffcf72;
+      stroke-width: 4
+    }
+
+    .ravan-brow,
+    .ravan-moustache {
+      fill: #38121a;
+      stroke: #38121a;
+      stroke-width: 4;
+      stroke-linecap: round
+    }
+
+    .ravan-eye {
+      fill: #24070d
+    }
+
+    .ravan-flame {
+      fill: #ff6c24;
+      filter: drop-shadow(0 0 8px rgba(255, 100, 22, .85))
+    }
+
+    .ravan-label {
+      fill: #fff0c2;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 5px
+    }
+
+    .ravan-impact {
+      fill: url(#ravan-flame);
+      opacity: 0;
+      pointer-events: none
+    }
+
+    .ravan-impact.is-bursting {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ravan-impact-burst .75s ease-out both
+    }
+
+    @keyframes ravan-impact-burst {
+      0% { opacity: 0; transform: scale(.08) }
+      45% { opacity: .95 }
+      100% { opacity: 0; transform: scale(1.8) }
+    }
+
+    .ravan-target.is-defeated {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ravan-defeated .9s ease-in forwards
+    }
+
+    @keyframes ravan-defeated {
+      0% { opacity: 1; transform: scale(1) rotate(0) }
+      30% { opacity: 1; transform: scale(1.08) rotate(-4deg) }
+      100% { opacity: 0; transform: scale(.72) rotate(12deg) }
+    }
+
+    .ravan-target.is-hit {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ravan-hit .32s ease-out
+    }
+
+    @keyframes ravan-hit {
+      0%, 100% { transform: translateX(0) }
+      30% { transform: translateX(-8px) rotate(-2deg) }
+      65% { transform: translateX(7px) rotate(2deg) }
+    }
+
+    .dussehra-fireworks {
+      position: absolute;
+      z-index: 2;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none
+    }
+
+    .firework-burst {
+      position: absolute;
+      left: var(--burst-x);
+      top: var(--burst-y);
+      width: 12px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--burst-color);
+      box-shadow: 0 0 12px 4px var(--burst-color);
+      animation: firework-bloom 1.4s ease-out var(--burst-delay) both
+    }
+
+    .firework-burst::before {
+      content: "";
+      position: absolute;
+      inset: -48px;
+      border-radius: 50%;
+      background: repeating-conic-gradient(var(--burst-color) 0deg 2deg, transparent 3deg 30deg);
+      mask-image: radial-gradient(circle, transparent 0 12%, #000 15% 70%, transparent 74%);
+      -webkit-mask-image: radial-gradient(circle, transparent 0 12%, #000 15% 70%, transparent 74%)
+    }
+
+    @keyframes firework-bloom {
+      0% { opacity: 0; transform: scale(.08) }
+      18% { opacity: 1 }
+      100% { opacity: 0; transform: scale(1.65) }
+    }
+
+    .dussehra-controls {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 22px auto 8px
+    }
+
+    .dussehra-strength {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 18px auto 0;
+      color: var(--cream);
+      font-size: .9rem;
+      font-weight: 800
+    }
+
+    .dussehra-strength-lights {
+      display: flex;
+      gap: 5px
+    }
+
+    .dussehra-strength-light {
+      width: 24px;
+      height: 9px;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, .18);
+      transition: background .2s ease, box-shadow .2s ease
+    }
+
+    .dussehra-strength-light.is-lit {
+      background: #ff754f;
+      box-shadow: 0 0 10px rgba(255, 117, 79, .65)
+    }
+
+    .dussehra-strength-value {
+      min-width: 54px;
+      color: var(--gold);
+      font-variant-numeric: tabular-nums
+    }
+
+    .dussehra-shoot,
+    .dussehra-reset {
+      min-width: 160px
+    }
+
+    .dussehra-shoot:disabled {
+      cursor: wait;
+      opacity: .7
+    }
+
+    .dussehra-status {
+      min-height: 1.5em;
+      margin-bottom: 0;
+      color: var(--gold);
+      font-weight: 700
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      .ravan-target.is-defeated,
+      .ravan-target.is-hit,
+      .ravan-impact.is-bursting,
+      .firework-burst {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important
+      }
+    }
+
     .closing {
       padding: 72px 0;
       text-align: center;

@@ -22,7 +22,7 @@
       <span>IT DEPARTMENT</span>
     </a>
     <nav class="nav" aria-label="Main navigation"><a href="#shakti">Nine Powers</a><a
-      href="#innovation">Innovation</a><a href="#team">Our Team</a><a href="#message">Our Message</a></nav>
+      href="#innovation">Innovation</a><a href="#team">Our Team</a><a href="#dussehra">Happy Dushera</a><a href="#message">Our Message</a></nav>
   </header>
   <main>
     <section class="hero" id="home">
@@ -296,8 +296,8 @@
             data-name="Ashok Kumar" data-role="IT Support Engineer"
             data-responsibility="Provides technical support, troubleshoots hardware and software issues, and maintains reliable, secure IT systems for employees."
             data-extra="Values careful planning and steady reliability behind every service."
-            data-photo="assets/team/ashok.png">
-            <img src="assets/team/ashok.png" alt="" loading="lazy">
+            data-photo="assets/team/Ashok.png">
+            <img src="assets/team/Ashok.png" alt="" loading="lazy">
             <span class="team-card-shade"></span>
             <span class="team-card-copy"><span class="team-card-role">IT Support</span><strong>Ashok Kumar</strong><span class="team-card-cta">View profile <span aria-hidden="true">↗</span></span></span>
           </button>
@@ -321,6 +321,89 @@
             <p id="team-dialog-extra">Known for turning complex security guidance into practical steps people can use.</p>
           </div>
         </dialog>
+      </div>
+    </section>
+    <section class="dussehra-section" id="dussehra" aria-labelledby="dussehra-title">
+      <div class="wrap dussehra-wrap">
+        <div class="section-head dussehra-head">
+          <div class="kicker">Vijayadashami · A celebration of courage</div>
+          <h2 id="dussehra-title">Happy Dushera</h2>
+          <p>Shoot this Arrow to Defeat Ravan.</p>
+        </div>
+        <p class="dussehra-instructions" id="dussehra-instructions">Drag the arrow back from the bow and release to fire, like a slingshot. Or aim with your pointer or tap the scene, then use Shoot Arrow. It takes three hits to defeat Ravan. Keyboard: focus the scene, aim with the up and down arrows, and press Space to shoot.</p>
+        <div class="dussehra-playfield">
+          <div class="dussehra-fireworks" aria-hidden="true"></div>
+          <svg class="dussehra-scene" viewBox="0 0 1000 460" role="img" tabindex="0" focusable="true" aria-describedby="dussehra-instructions dussehra-status" aria-labelledby="dussehra-scene-title dussehra-scene-description">
+            <title id="dussehra-scene-title">Aim the bow and arrow at Ravan</title>
+            <desc id="dussehra-scene-description">A festive night scene with a bow on the left and a Ravan effigy on the right.</desc>
+            <defs>
+              <linearGradient id="dussehra-sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#291024" />
+                <stop offset="1" stop-color="#691c2b" />
+              </linearGradient>
+              <linearGradient id="ravan-clothes" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffcf4a" />
+                <stop offset="1" stop-color="#e74b35" />
+              </linearGradient>
+              <marker id="dussehra-arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+                <path d="M0 0 L12 6 L0 12 L3.5 6 Z" fill="#fff1bb" />
+              </marker>
+              <radialGradient id="ravan-flame">
+                <stop offset="0" stop-color="#fff7bb" />
+                <stop offset=".45" stop-color="#ffb52e" />
+                <stop offset="1" stop-color="#ef352c" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <rect class="dussehra-sky" width="1000" height="460" rx="22" />
+            <g class="dussehra-stars" aria-hidden="true">
+              <circle cx="90" cy="75" r="2" /><circle cx="180" cy="125" r="2.5" /><circle cx="370" cy="65" r="2" />
+              <circle cx="485" cy="112" r="2.5" /><circle cx="540" cy="58" r="1.8" /><circle cx="930" cy="82" r="2.4" />
+              <path d="M430 85v20m-10-10h20M930 140v16m-8-8h16" />
+            </g>
+            <circle class="dussehra-moon" cx="835" cy="86" r="31" />
+            <path class="dussehra-hills" d="M0 340Q130 275 260 340T520 330T770 340T1000 315V460H0Z" />
+            <path class="dussehra-ground" d="M0 390Q170 370 350 394T700 388T1000 380V460H0Z" />
+            <path class="dussehra-rangoli" d="M110 420l18-18 18 18-18 18zm0 0h36m-18-18v36M370 418l15-15 15 15-15 15zm-9 0h30m-15-15v30" />
+
+            <g class="dussehra-bow" aria-hidden="true">
+              <path d="M267 364Q387 285 267 190" />
+              <path class="dussehra-bow-string" d="M267 364L267 190" />
+              <path class="dussehra-bow-grip" d="M267 263l-7 18 7 18 7-18z" />
+            </g>
+            <line class="dussehra-arrow" id="dussehra-arrow" x1="267" y1="281" x2="765" y2="264" marker-end="url(#dussehra-arrowhead)" />
+            <circle class="dussehra-arrow-rest" cx="267" cy="281" r="5" aria-hidden="true" />
+
+            <g class="ravan-target" id="ravan-target" aria-label="Ravan effigy target">
+              <path class="ravan-shadow" d="M686 384h160l-16 12H702z" />
+              <path class="ravan-arm" d="M722 270l-64 63m141-63 63 63" />
+              <path class="ravan-torso" d="M720 253l40-15 40 15 22 112h-124z" />
+              <path class="ravan-sash" d="M724 263l69 79m-35-99-33 99" />
+              <path class="ravan-leg" d="M731 362l-12 39m42-39 13 39" />
+              <path class="ravan-crown" d="M720 176l8-39 18 22 14-43 14 43 19-22 7 39z" />
+              <ellipse class="ravan-face" cx="760" cy="193" rx="38" ry="31" />
+              <path class="ravan-brow" d="M738 187q9-8 18 0m9 0q9-8 18 0" />
+              <circle class="ravan-eye" cx="747" cy="193" r="3" /><circle class="ravan-eye" cx="773" cy="193" r="3" />
+              <path class="ravan-moustache" d="M760 202q-15-10-26 0 9 12 25 5 17 7 27-5-12-10-26 0z" />
+              <path class="ravan-flame" d="M694 352q-20 23 0 37 19-16 0-37m133-3q-20 23 0 37 19-16 0-37" />
+              <text class="ravan-label" x="760" y="432" text-anchor="middle">RAVAN</text>
+            </g>
+            <circle class="ravan-impact" id="ravan-impact" cx="760" cy="280" r="85" aria-hidden="true" />
+          </svg>
+        </div>
+        <div class="dussehra-strength" id="dussehra-strength" role="meter" aria-label="Ravan's strength" aria-valuemin="0" aria-valuemax="3" aria-valuenow="3">
+          <span class="dussehra-strength-label">Ravan's strength</span>
+          <span class="dussehra-strength-lights" aria-hidden="true">
+            <span class="dussehra-strength-light is-lit"></span>
+            <span class="dussehra-strength-light is-lit"></span>
+            <span class="dussehra-strength-light is-lit"></span>
+          </span>
+          <span class="dussehra-strength-value" id="dussehra-strength-value">3 of 3</span>
+        </div>
+        <div class="dussehra-controls">
+          <button class="btn primary dussehra-shoot" id="dussehra-shoot" type="button">Shoot Arrow <span aria-hidden="true">➶</span></button>
+          <button class="btn secondary dussehra-reset" id="dussehra-reset" type="button" hidden>Play Again</button>
+        </div>
+        <p class="dussehra-status" id="dussehra-status" role="status" aria-live="polite">Your arrow is aimed at Ravan. Shoot when you’re ready.</p>
       </div>
     </section>
     <section class="closing" id="message">
@@ -348,6 +431,18 @@
     const teamCarouselStatus = document.querySelector('.team-carousel-status');
     const backgroundAudio = document.querySelector('.background-audio');
     const audioToggle = document.querySelector('.audio-toggle');
+    const dussehraScene = document.querySelector('.dussehra-scene');
+    const dussehraArrow = document.querySelector('#dussehra-arrow');
+    const dussehraBowString = document.querySelector('.dussehra-bow-string');
+    const dussehraShoot = document.querySelector('#dussehra-shoot');
+    const dussehraReset = document.querySelector('#dussehra-reset');
+    const dussehraStatus = document.querySelector('#dussehra-status');
+    const ravanTarget = document.querySelector('#ravan-target');
+    const ravanImpact = document.querySelector('#ravan-impact');
+    const dussehraFireworks = document.querySelector('.dussehra-fireworks');
+    const dussehraStrength = document.querySelector('#dussehra-strength');
+    const dussehraStrengthValue = document.querySelector('#dussehra-strength-value');
+    const dussehraStrengthLights = [...document.querySelectorAll('.dussehra-strength-light')];
     let teamStatusTimer;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let currentGoddess = 0;
@@ -565,6 +660,218 @@
       slideshowToggle.setAttribute('aria-pressed', String(slideshowPaused));
       startSlideshow();
     });
+
+    const arrowRest = { x: 267, y: 281 };
+    const defaultArrowAim = { x: 765, y: 264 };
+    let arrowAim = { ...defaultArrowAim };
+    let arrowInFlight = false;
+    let ravanDefeated = false;
+    let ravanStrength = 3;
+    let isDrawingBow = false;
+    let bowPullLength = 0;
+
+    function updateRavanStrength() {
+      dussehraStrength.setAttribute('aria-valuenow', String(ravanStrength));
+      dussehraStrengthValue.textContent = ravanStrength ? `${ravanStrength} of 3` : 'Defeated';
+      dussehraStrengthLights.forEach((light, index) => {
+        light.classList.toggle('is-lit', index < ravanStrength);
+      });
+    }
+
+    function setArrowAim(point) {
+      arrowAim = {
+        x: Math.min(960, Math.max(arrowRest.x + 45, point.x)),
+        y: Math.min(420, Math.max(55, point.y))
+      };
+      dussehraArrow.setAttribute('x2', arrowAim.x.toFixed(1));
+      dussehraArrow.setAttribute('y2', arrowAim.y.toFixed(1));
+    }
+
+    function pointFromPointer(event) {
+      const point = dussehraScene.createSVGPoint();
+      point.x = event.clientX;
+      point.y = event.clientY;
+      const localPoint = point.matrixTransform(dussehraScene.getScreenCTM().inverse());
+      return { x: localPoint.x, y: localPoint.y };
+    }
+
+    function updateBowPull(point) {
+      const pullX = Math.min(-18, Math.max(-135, point.x - arrowRest.x));
+      const pullY = Math.min(105, Math.max(-105, point.y - arrowRest.y));
+      bowPullLength = Math.hypot(pullX, pullY);
+      const pulledPoint = { x: arrowRest.x + pullX, y: arrowRest.y + pullY };
+      dussehraBowString.setAttribute('d', `M267 364L${pulledPoint.x.toFixed(1)} ${pulledPoint.y.toFixed(1)}L267 190`);
+
+      const aimX = -pullX;
+      const aimY = -pullY;
+      const aimLength = Math.hypot(aimX, aimY) || 1;
+      const power = Math.min(1, bowPullLength / 170);
+      const shotRange = 400 + power * 150;
+      setArrowAim({
+        x: arrowRest.x + aimX / aimLength * shotRange,
+        y: arrowRest.y + aimY / aimLength * shotRange
+      });
+    }
+
+    function resetBowString() {
+      dussehraBowString.setAttribute('d', 'M267 364L267 190');
+    }
+
+    function launchDussehraFireworks() {
+      const bursts = [
+        [18, 28, '#ffd166'], [36, 18, '#ff7b54'], [54, 30, '#fff0a7'],
+        [72, 16, '#ee91a4'], [88, 31, '#72dcc7'], [44, 42, '#ffb52e']
+      ];
+      bursts.forEach(([x, y, color], index) => {
+        const burst = document.createElement('span');
+        burst.className = 'firework-burst';
+        burst.style.setProperty('--burst-x', `${x}%`);
+        burst.style.setProperty('--burst-y', `${y}%`);
+        burst.style.setProperty('--burst-color', color);
+        burst.style.setProperty('--burst-delay', `${index * 90}ms`);
+        dussehraFireworks.append(burst);
+        window.setTimeout(() => burst.remove(), 2200);
+      });
+    }
+
+    function playAgain() {
+      ravanDefeated = false;
+      ravanStrength = 3;
+      ravanTarget.classList.remove('is-defeated');
+      ravanTarget.classList.remove('is-hit');
+      isDrawingBow = false;
+      bowPullLength = 0;
+      resetBowString();
+      ravanImpact.classList.remove('is-bursting');
+      dussehraFireworks.replaceChildren();
+      dussehraShoot.disabled = false;
+      dussehraShoot.hidden = false;
+      dussehraShoot.innerHTML = 'Shoot Arrow <span aria-hidden="true">➶</span>';
+      dussehraReset.hidden = true;
+      setArrowAim(defaultArrowAim);
+      updateRavanStrength();
+      dussehraStatus.textContent = 'Your arrow is aimed at Ravan. Shoot when you’re ready.';
+    }
+
+    function shootDussehraArrow() {
+      if (arrowInFlight || ravanDefeated) return;
+      arrowInFlight = true;
+      dussehraShoot.disabled = true;
+      dussehraStatus.textContent = 'Arrow released!';
+
+      const target = { ...arrowAim };
+      const startTime = performance.now();
+      const pullPower = Math.min(1, bowPullLength / 170);
+      const flightDuration = bowPullLength >= 28 ? 740 - pullPower * 300 : 620;
+
+      function animateArrow(now) {
+        const progress = Math.min(1, (now - startTime) / flightDuration);
+        const easedProgress = 1 - (1 - progress) ** 2;
+        setArrowAim({
+          x: arrowRest.x + (target.x - arrowRest.x) * easedProgress,
+          y: arrowRest.y + (target.y - arrowRest.y) * easedProgress
+        });
+
+        if (progress < 1) {
+          window.requestAnimationFrame(animateArrow);
+          return;
+        }
+
+        arrowInFlight = false;
+        const hitRavan = target.x >= 675 && target.x <= 845 && target.y >= 135 && target.y <= 375;
+        if (!hitRavan) {
+          dussehraShoot.disabled = false;
+          dussehraStatus.textContent = 'The arrow missed. Aim at Ravan and try again.';
+          return;
+        }
+
+        ravanStrength -= 1;
+        updateRavanStrength();
+        ravanImpact.setAttribute('cx', target.x.toFixed(1));
+        ravanImpact.setAttribute('cy', target.y.toFixed(1));
+        ravanImpact.classList.remove('is-bursting');
+        void ravanImpact.getBoundingClientRect();
+        ravanImpact.classList.add('is-bursting');
+        if (ravanStrength === 0) {
+          ravanDefeated = true;
+          ravanTarget.classList.remove('is-hit');
+          ravanTarget.classList.add('is-defeated');
+          launchDussehraFireworks();
+          dussehraShoot.hidden = true;
+        } else {
+          ravanTarget.classList.remove('is-hit');
+          void ravanTarget.getBoundingClientRect();
+          ravanTarget.classList.add('is-hit');
+        }
+        dussehraShoot.disabled = ravanStrength === 0;
+        dussehraReset.hidden = ravanStrength !== 0;
+        dussehraStatus.textContent = ravanStrength === 0
+          ? 'You defeated Ravan! Enjoy the fireworks and celebrate Happy Dushera.'
+          : `Direct hit! ${ravanStrength} ${ravanStrength === 1 ? 'hit' : 'hits'} left to defeat Ravan.`;
+      }
+
+      window.requestAnimationFrame(animateArrow);
+    }
+
+    dussehraScene.addEventListener('pointermove', event => {
+      if (arrowInFlight || ravanDefeated) return;
+      if (isDrawingBow) {
+        updateBowPull(pointFromPointer(event));
+        return;
+      }
+      if (event.pointerType === 'mouse' || event.pointerType === 'pen') {
+        setArrowAim(pointFromPointer(event));
+      }
+    });
+    dussehraScene.addEventListener('pointerdown', event => {
+      if (arrowInFlight || ravanDefeated) return;
+      const point = pointFromPointer(event);
+      if (Math.hypot(point.x - arrowRest.x, point.y - arrowRest.y) <= 48) {
+        isDrawingBow = true;
+        bowPullLength = 0;
+        dussehraScene.setPointerCapture(event.pointerId);
+        updateBowPull(point);
+        dussehraStatus.textContent = 'Pull the arrow back, then release to shoot.';
+      } else {
+        setArrowAim(point);
+      }
+    });
+    dussehraScene.addEventListener('pointerup', event => {
+      if (!isDrawingBow) return;
+      isDrawingBow = false;
+      resetBowString();
+      if (bowPullLength >= 28) {
+        shootDussehraArrow();
+      } else {
+        setArrowAim(defaultArrowAim);
+        dussehraStatus.textContent = 'Pull the arrow farther back to shoot.';
+      }
+      bowPullLength = 0;
+    });
+    dussehraScene.addEventListener('pointercancel', () => {
+      if (!isDrawingBow) return;
+      isDrawingBow = false;
+      bowPullLength = 0;
+      resetBowString();
+    });
+    dussehraScene.addEventListener('keydown', event => {
+      if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+        event.preventDefault();
+        const distance = Math.hypot(arrowAim.x - arrowRest.x, arrowAim.y - arrowRest.y);
+        const angle = Math.atan2(arrowAim.y - arrowRest.y, arrowAim.x - arrowRest.x)
+          + (event.key === 'ArrowUp' ? -0.07 : 0.07);
+        setArrowAim({
+          x: arrowRest.x + distance * Math.cos(angle),
+          y: arrowRest.y + distance * Math.sin(angle)
+        });
+      } else if (event.code === 'Space') {
+        event.preventDefault();
+        shootDussehraArrow();
+      }
+    });
+    dussehraShoot.addEventListener('click', shootDussehraArrow);
+    dussehraReset.addEventListener('click', playAgain);
+    setArrowAim(defaultArrowAim);
 
     startSlideshow();
   </script>
